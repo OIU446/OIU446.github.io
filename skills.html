@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ทักษะ — [ชื่อของคุณ]</title>
+  <meta name="description" content="พอร์ตโฟลิโอของ [ชื่อของคุณ] — ทักษะ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="เมนูหลัก">
+      <a href="index.html" class="logo">[ชื่อ]<span class="accent">.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="เปิดเมนู">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="about.html">ประวัติส่วนตัว</a></li>
+        <li><a href="skills.html" class="active" aria-current="page">ทักษะ</a></li>
+        <li><a href="projects.html">ผลงาน</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="journey.html">เส้นทาง</a></li>
+        <li><a href="contact.html" class="nav-cta">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page">
+      <div class="container">
+        <h1 class="section-title reveal"><span class="num">02</span>ทักษะ</h1>
+        <div class="skills-grid">
+          <article class="card reveal">
+            <h2>[หมวดทักษะ 1]</h2>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </article>
+          <article class="card reveal">
+            <h2>[หมวดทักษะ 2]</h2>
+            <ul class="tags"><li>[ทักษะ]</li><li>[ทักษะ]</li><li>[ทักษะ]</li></ul>
+          </article>
+          <article class="card reveal">
+            <h2>ทักษะอื่น ๆ</h2>
+            <ul class="tags"><li>ทำงานเป็นทีม</li><li>การสื่อสาร</li><li>[ทักษะ]</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> [ชื่อของคุณ]</p>
+      <a href="contact.html" class="link-arrow">ช่องทางติดต่อ <span aria-hidden="true">→</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
