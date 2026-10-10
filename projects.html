@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ผลงาน — [ชื่อของคุณ]</title>
-  <meta name="description" content="พอร์ตโฟลิโอของ [ชื่อของคุณ] — ผลงาน">
+  <title>ผลงาน — ปวร แย้มสรวล</title>
+  <meta name="description" content="พอร์ตโฟลิโอของ ปวร แย้มสรวล — ผลงาน">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
   <header class="site-header">
     <nav class="nav container" aria-label="เมนูหลัก">
-      <a href="index.html" class="logo">[ชื่อ]<span class="accent">.</span></a>
+      <a href="index.html" class="logo">ปวร<span class="accent">.</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="เปิดเมนู">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -34,32 +34,69 @@
     <section class="page">
       <div class="container">
         <h1 class="section-title reveal"><span class="num">03</span>ผลงาน</h1>
+        <div class="filters reveal" role="group" aria-label="กรองผลงานตามหมวด">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">ทั้งหมด</button>
+          <button type="button" class="filter-btn" data-filter="engineering" aria-pressed="false">วิศวกรรม & ออกแบบ</button>
+          <button type="button" class="filter-btn" data-filter="software" aria-pressed="false">ซอฟต์แวร์ & AI</button>
+          <button type="button" class="filter-btn" data-filter="competition" aria-pressed="false">การแข่งขัน</button>
+          <button type="button" class="filter-btn" data-filter="content" aria-pressed="false">คอนเทนต์</button>
+        </div>
+        <p class="sr-only" id="filter-status" aria-live="polite"></p>
         <div class="projects-grid">
-          <article class="project reveal">
+          <article class="project reveal" data-category="engineering competition">
             <div class="project-thumb" aria-hidden="true">01</div>
             <div class="project-body">
-              <h2>[ชื่อโปรเจกต์ 1]</h2>
-              <p>[อธิบายสั้น ๆ ว่าโปรเจกต์นี้คืออะไร แก้ปัญหาอะไร และคุณรับผิดชอบส่วนไหน]</p>
-              <ul class="tags tags-sm"><li>HTML</li><li>CSS</li></ul>
-              <a href="#" class="link-arrow">ดูรายละเอียด <span aria-hidden="true">→</span></a>
+              <p class="project-period">2026 – ปัจจุบัน</p>
+              <h2>สมาชิกฝ่าย Mechanical ทีม CURIT</h2>
+              <ul class="project-points"><li>ร่วมทีมเพื่อเข้าแข่งขัน TRRN Railway Challenge 2027</li></ul>
+              <ul class="tags tags-sm"><li>Mechanical</li><li>ทีมแข่งขัน</li></ul>
             </div>
           </article>
-          <article class="project reveal">
+          <article class="project reveal" data-category="software competition">
             <div class="project-thumb" aria-hidden="true">02</div>
             <div class="project-body">
-              <h2>[ชื่อโปรเจกต์ 2]</h2>
-              <p>[คำอธิบายโปรเจกต์]</p>
-              <ul class="tags tags-sm"><li>[เครื่องมือ]</li></ul>
-              <a href="#" class="link-arrow">ดูรายละเอียด <span aria-hidden="true">→</span></a>
+              <p class="project-period">Jan 2026 – Apr 2026</p>
+              <h2>VeriShare — InterCSII Hackathon 2026</h2>
+              <p class="project-badge">รองชนะเลิศอันดับที่ 1</p>
+              <ul class="project-points"><li>คิดหาปัญหาเกี่ยวกับการใช้ AI อย่างมีความรับผิดชอบ เพื่อแก้ปัญหาข้อมูลที่ผิดพลาด</li><li>พัฒนาระบบและโปรโตไทป์ของแอปพลิเคชัน VeriShare</li><li>หาข้อมูลด้านการตลาดและความเป็นไปได้ทางธุรกิจ</li></ul>
+              <ul class="tags tags-sm"><li>AI</li><li>Prototype</li><li>Business</li></ul>
             </div>
           </article>
-          <article class="project reveal">
+          <article class="project reveal" data-category="engineering">
             <div class="project-thumb" aria-hidden="true">03</div>
             <div class="project-body">
-              <h2>[ชื่อโปรเจกต์ 3]</h2>
-              <p>[คำอธิบายโปรเจกต์]</p>
-              <ul class="tags tags-sm"><li>[เครื่องมือ]</li></ul>
-              <a href="#" class="link-arrow">ดูรายละเอียด <span aria-hidden="true">→</span></a>
+              <p class="project-period">Aug 2025 – Jan 2026</p>
+              <h2>ธูป Shot ธูปเย็นลด PM 2.5</h2>
+              <ul class="project-points"><li>ใช้กระบวนการ Design Thinking หาปัญหาจากข้อมูลปฐมภูมิและทุติยภูมิ จากการสัมภาษณ์</li><li>ออกแบบโมเดลธูปทางเลือกด้วย Fusion 360 พิมพ์โมเดล และนำเสนอกับกลุ่มผู้ใช้จริง</li></ul>
+              <ul class="tags tags-sm"><li>Fusion 360</li><li>3D Printing</li><li>Design Thinking</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="software">
+            <div class="project-thumb" aria-hidden="true">04</div>
+            <div class="project-body">
+              <p class="project-period">2023</p>
+              <h2>ออกกำลังกายให้ถูกวิธีด้วย Machine Learning</h2>
+              <ul class="project-points"><li>พัฒนาโปรแกรมด้วย Python โดยใช้โมเดล Mediapipe Pose ตรวจสอบท่าทางออกกำลังกายของผู้ใช้ให้ถูกต้อง</li></ul>
+              <ul class="tags tags-sm"><li>Python</li><li>Mediapipe</li><li>Machine Learning</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="engineering">
+            <div class="project-thumb" aria-hidden="true">05</div>
+            <div class="project-body">
+              <p class="project-period">2023</p>
+              <h2>เปรียบเทียบประสิทธิภาพของลูกหมุนระบายอากาศ</h2>
+              <ul class="project-points"><li>ใช้ SolidWorks และ SolidWorks Flow Simulation ออกแบบลูกหมุนระบายอากาศและจำลองการไหลของอากาศในเงื่อนไขต่าง ๆ</li><li>นำเสนอออนไลน์เป็นภาษาอังกฤษ</li></ul>
+              <ul class="tags tags-sm"><li>SolidWorks</li><li>Flow Simulation</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="content">
+            <div class="project-thumb" aria-hidden="true">06</div>
+            <div class="project-body">
+              <p class="project-period">ช่อง YouTube</p>
+              <h2>YouTube Channel — Paworn101</h2>
+              <ul class="project-points"><li>ทำช่อง YouTube และตัดต่อวิดีโอเอง</li></ul>
+              <ul class="tags tags-sm"><li>YouTube</li><li>ตัดต่อวิดีโอ</li></ul>
+              <a href="https://www.youtube.com/@Paworn101/" class="link-arrow" target="_blank" rel="noopener">ไปที่ช่อง YouTube <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </div>
@@ -69,7 +106,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> [ชื่อของคุณ]</p>
+      <p>© <span id="year"></span> ปวร แย้มสรวล</p>
       <a href="contact.html" class="link-arrow">ช่องทางติดต่อ <span aria-hidden="true">→</span></a>
     </div>
   </footer>

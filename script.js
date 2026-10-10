@@ -41,3 +41,37 @@ if ("IntersectionObserver" in window) {
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Language buttons: tap/click toggles the score tooltip (hover and focus are handled in CSS)
+const langButtons = document.querySelectorAll(".lang-btn");
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const open = btn.getAttribute("aria-expanded") !== "true";
+    langButtons.forEach((b) => b.setAttribute("aria-expanded", "false"));
+    btn.setAttribute("aria-expanded", String(open));
+  });
+});
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".lang")) langButtons.forEach((b) => b.setAttribute("aria-expanded", "false"));
+});
+
+// Project filter
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project[data-category]");
+const filterStatus = document.getElementById("filter-status");
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+    filterButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+    let shown = 0;
+    projects.forEach((p) => {
+      const match = filter === "all" || p.dataset.category.split(" ").includes(filter);
+      p.hidden = !match;
+      if (match) {
+        p.classList.add("is-visible");
+        shown++;
+      }
+    });
+    if (filterStatus) filterStatus.textContent = `แสดง ${shown} ผลงาน`;
+  });
+});
